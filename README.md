@@ -1,6 +1,8 @@
 # My Todo List App
 
-This is a simple Todo List application built using HTML, CSS, and JavaScript. It allows users to add tasks, mark them as completed, and filter between all, completed, or pending tasks. The app stores the tasks in `localStorage` so that they persist even after refreshing the page.
+This is a simple Todo List application built using HTML, CSS, and JavaScript.
+It allows users to add tasks, mark them as completed, and filter between all, completed, or pending tasks.
+The app stores the tasks in `localStorage` so that they persist even after refreshing the page.
 
 ## Features
 - Add new tasks.
