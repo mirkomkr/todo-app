@@ -1,0 +1,147 @@
+/* Reset and base styling for the html element */
+html {
+    margin: 0; /* Removes the default margin */
+    padding: 0; /* Removes the default padding */
+    text-align: center; /* Centers all text horizontally */
+    font-size: 100%; /* Sets the base font size to the default */
+    height: 100%; /* Ensures the element takes full height */
+}
+
+/* Modern body styling with a gradient and custom font */
+body {
+    box-sizing: border-box; /* Includes padding and border in element’s total width and height */
+    font-family: "Roboto Light", "Helvetica Neue", Helvetica, Arial, sans-serif; /* Sets the font family */
+    background: linear-gradient(135deg, #6a6a6a, #ffffff); /* Creates a diagonal gradient background */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease; /* Smooth transition for background changes */
+}
+
+/* Styling for the header */
+h1 {
+    text-align: center; /* Centers the text */
+    color: #fff; /* Sets the text color to white */
+    margin-top: 30px; /* Adds space at the top */
+    font-size: 2rem; /* Increases font size for better readability */
+    letter-spacing: 1px; /* Adds slight letter spacing */
+}
+
+/* Container for the todo list items with flexbox layout */
+.todo-container {
+    display: flex; /* Uses flexbox to lay out items */
+    flex-direction: column; /* Arranges items in a column */
+    align-items: center; /* Centers items horizontally */
+    padding: 20px 0; /* Adds vertical padding */
+}
+
+/* Styling for the buttons container */
+.buttons {
+    display: flex; /* Uses flexbox for button layout */
+    gap: 15px; /* Adds space between buttons */
+    margin-top: 20px; /* Adds space above the buttons */
+}
+
+/* Button styling */
+button {
+    color: white; /* Sets text color to white */
+    background-color: #4CAF50; /* Green background color */
+    padding: 12px 20px; /* Adds padding around the text */
+    border-radius: 8px; /* Rounds the corners of the button */
+    border: none; /* Removes border for a cleaner look */
+    width: 120px; /* Increases button width */
+    font-size: 1rem; /* Sets a comfortable font size */
+    cursor: pointer; /* Changes cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions on hover and click */
+}
+
+/* Hover effect for the buttons */
+button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    transform: scale(1.05); /* Slightly increases button size */
+}
+
+/* Active state styling for the buttons */
+button:active {
+    background-color: #388e3c; /* Darker green when clicked */
+    color: white; /* Ensures text remains white */
+}
+
+/* Styling for the input field */
+input#todo {
+    min-width: 280px; /* Sets a minimum width for usability */
+    padding: 12px 16px; /* Adds padding around the input */
+    border-radius: 10px; /* Rounds the input corners */
+    border: 1px solid #ddd; /* Light gray border */
+    font-size: 1rem; /* Adjusted font size */
+    transition: border 0.3s ease; /* Smooth transition for border color on focus */
+}
+
+/* Focus state for the input field */
+input#todo:focus {
+    border-color: #4CAF50; /* Green border when focused */
+    outline: none; /* Removes default outline */
+}
+
+/* Styling for the todo list */
+ul#todolist {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+    max-width: 450px; /* Increases the width for better spacing */
+    margin: 50px auto 20px; /* Centers the list */
+    background-color: #f4f4f4; /* Light gray background */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+/* Styling for each todo item */
+ul#todolist li {
+    text-align: left; /* Aligns text to the left */
+    padding: 15px 20px; /* Adds padding for better interactivity */
+    cursor: pointer; /* Indicates interactivity */
+    min-width: 280px; /* Ensures a minimum width */
+    font-size: 1rem; /* Adjusts font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+    border-bottom: 1px solid #e0e0e0; /* Light border for separation between items */
+}
+
+/* Removes bottom border from the last todo item */
+ul#todolist li:last-child {
+    border-bottom: none; /* Removes the border from the last item */
+}
+
+/* Hover effect for todo items */
+ul#todolist li:hover {
+    background-color: #e9e9e9; /* Light gray background on hover */
+    transform: scale(1.02); /* Slightly increases the item size */
+}
+
+/* Checkmark for completed tasks */
+ul#todolist li span.completed:after {
+    content: '\02611'; /* Unicode checkmark character */
+    color: #4CAF50; /* Green checkmark color */
+    font-size: 20px; /* Adjusted font size */
+    padding-right: 10px; /* Adds space between the checkmark and text */
+}
+
+/* Styling for uncompleted tasks */
+ul#todolist li span.uncompleted:after {
+    content: '\02610'; /* Unicode checkbox character */
+    color: #f44336; /* Red color for uncompleted tasks */
+    font-size: 20px; /* Adjusted font size */
+    padding-right: 10px; /* Adds space between checkbox and text */
+}
+
+/* Cross icon for removing tasks */
+ul#todolist li:hover span.cross:after {
+    content: '\02612'; /* Unicode cross character */
+    color: #f44336; /* Red color for cross */
+    font-size: 25px; /* Increases the font size */
+    padding-right: 5px; /* Adds space */
+    float: right; /* Floats the cross icon to the right */
+    margin-right: 15px; /* Adds space to the right */
+}
+
+/* Focus and active state styling for the input and buttons */
+input#todo:focus, button:active {
+    outline: none; /* Removes default outline on focus */
+}

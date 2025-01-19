@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8">
+
+    <!-- Set the title of the page -->
+    <title>My Todo List</title>
+
+    <!-- Favicon with different sizes for accessibility and device compatibility -->
+    <link rel="icon" href="public/assets/check-mark32x32.png" sizes="32x32"
+          type="image/png">
+    <link rel="icon" href="public/assets/check-mark16x16.png" sizes="16x16"
+          type="image/png">
+    <link rel="icon" href="public/assets/check-mark.png" type="image/x-icon">
+
+    <!-- Apple touch icon for iOS devices -->
+    <link rel="apple-touch-icon" href="public/assets/apple-icon.png">
+
+    <!-- Viewport meta tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to the external JavaScript file, with "defer" to load it after the HTML -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- Main container for the todo list -->
+<main class="todo-container">
+    <!-- Main heading of the todo list -->
+    <h1>My Todo List</h1>
+
+    <!-- Input field for entering new todo items -->
+    <input id="todo" placeholder="Enter a task" aria-label="Task input field">
+
+    <!-- Container for the filter buttons -->
+    <section class="buttons">
+        <!-- Button to show all tasks, initially disabled -->
+        <button id="btnAll" class="active" disabled aria-disabled="true"
+                aria-label="Show all tasks">Show All
+        </button>
+
+        <!-- Button to show only completed tasks -->
+        <button id="btnCompleted" aria-label="Show completed tasks">Show
+            Completed
+        </button>
+
+        <!-- Button to show only tasks that are not completed -->
+        <button id="btnTodo" aria-label="Show tasks to do">Show To Do</button>
+    </section>
+</main>
+</body>
+</html>
